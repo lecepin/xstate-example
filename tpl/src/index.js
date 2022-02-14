@@ -8,7 +8,7 @@ import "./index.css";
 
 inspect({
   iframe: document.getElementById("xstate-inspect"),
-  url: "https://stately.ai/viz?inspect",
+  url: "https://apis.leping.fun/viz?inspect&panel=false",
 });
 
 Split(["#xstate-inspect", "#root"], { minSize: 0 });
