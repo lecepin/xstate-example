@@ -11,7 +11,7 @@ inspect({
   url: "https://apis.leping.fun/viz?inspect&panel=false",
 });
 
-Split(["#xstate-inspect", "#root"], { minSize: 0 });
+Split(["#xstate-inspect", "#root"], { minSize: 0, sizes: [35, 65] });
 
 ReactDOM.render(
   <StrictMode>
