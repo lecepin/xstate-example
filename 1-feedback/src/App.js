@@ -1,23 +1,11 @@
-import { createMachine } from "xstate";
 import { useMachine } from "@xstate/react";
+import { feddbackMachine } from "./fsm";
 
 import "./styles.css";
 
-const toggleMachine = createMachine({
-  id: "toggle",
-  initial: "inactive",
-  states: {
-    inactive: {
-      on: { TOGGLE: "active" },
-    },
-    active: {
-      on: { TOGGLE: "inactive" },
-    },
-  },
-});
-
 export default function App() {
-  const [state, send] = useMachine(toggleMachine, { devTools: true });
+  const [state, send] = useMachine(feddbackMachine, { devTools: true });
+  const { score, errorMsg, selectModule, suggest } = state.context;
 
   return (
     <button onClick={() => send("TOGGLE")}>
