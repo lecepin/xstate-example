@@ -1,2 +1,37 @@
 .App {
 }
+
+.App-feedback-btn {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 1;
+  cursor: pointer;
+  background-color: #096dd9;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014,
+    0 9px 28px 8px #0000000d;
+  transition: color 0.3s;
+}
+
+.App-feedback-modal-wrap {
+  top: unset;
+  left: unset;
+  right: unset;
+  bottom: unset;
+}
+
+.App-feedback-modal {
+  position: fixed;
+  right: 10px;
+  top: unset;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.App-feedback-modal-footer {
+  text-align: right;
+}
+
+.App-center {
+  text-align: center;
+}
