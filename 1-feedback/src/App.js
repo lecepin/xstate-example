@@ -39,7 +39,7 @@ export default function App() {
         className="App-feedback-modal"
         wrapClassName="App-feedback-modal-wrap"
       >
-        {state.matches("显示.评分.评分") ? (
+        {state.matches("显示.步骤记录.评分") ? (
           <>
             <Typography.Paragraph>你对此系统是否满意？</Typography.Paragraph>
             <Typography.Text type="secondary">不满意</Typography.Text>
@@ -51,15 +51,15 @@ export default function App() {
           </>
         ) : null}
 
-        {state.matches("显示.评分.关注功能.不满意") ? (
+        {state.matches("显示.步骤记录.关注功能.不满意") ? (
           <Typography.Paragraph>你最不满意的有哪些功能？</Typography.Paragraph>
         ) : null}
 
-        {state.matches("显示.评分.关注功能.满意") ? (
+        {state.matches("显示.步骤记录.关注功能.满意") ? (
           <Typography.Paragraph>你最满意的有哪些功能？</Typography.Paragraph>
         ) : null}
 
-        {state.matches("显示.评分.关注功能") ? (
+        {state.matches("显示.步骤记录.关注功能") ? (
           <Checkbox.Group
             value={selectModule}
             options={[
@@ -121,13 +121,13 @@ export default function App() {
         <Divider />
 
         <div className="App-feedback-modal-footer">
-          {["显示.建议", "显示.评分.关注功能"].some(state.matches) ? (
+          {["显示.建议", "显示.步骤记录.关注功能"].some(state.matches) ? (
             <Button style={{ marginRight: 12 }} onClick={() => send("上一步")}>
               上一步
             </Button>
           ) : null}
 
-          {state.matches("显示.评分") ? (
+          {state.matches("显示.步骤记录") ? (
             <Button onClick={() => send("下一步")}>下一步</Button>
           ) : null}
 

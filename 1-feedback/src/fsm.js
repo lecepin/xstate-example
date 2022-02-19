@@ -20,9 +20,9 @@ const feddbackMachine = createMachine(
         },
       },
       显示: {
-        initial: "评分",
+        initial: "步骤记录",
         states: {
-          评分: {
+          步骤记录: {
             initial: "评分",
             states: {
               评分: {
@@ -34,11 +34,11 @@ const feddbackMachine = createMachine(
                   下一步: [
                     {
                       cond: "isLess",
-                      target: "#反馈建议.显示.评分.关注功能.不满意",
+                      target: "#反馈建议.显示.步骤记录.关注功能.不满意",
                     },
                     {
                       cond: "isMore",
-                      target: "#反馈建议.显示.评分.关注功能.满意",
+                      target: "#反馈建议.显示.步骤记录.关注功能.满意",
                     },
                     {
                       cond: "isEqual",
@@ -52,7 +52,7 @@ const feddbackMachine = createMachine(
               关注功能: {
                 on: {
                   上一步: {
-                    target: "#反馈建议.显示.评分.评分",
+                    target: "#反馈建议.显示.步骤记录.评分",
                   },
                   下一步: {
                     target: "#反馈建议.显示.建议",
@@ -76,7 +76,7 @@ const feddbackMachine = createMachine(
             onExit: "doClearErrorMsg",
             on: {
               上一步: {
-                target: "#反馈建议.显示.评分.上个步骤",
+                target: "#反馈建议.显示.步骤记录.上个步骤",
               },
               提交: {
                 target: "#反馈建议.显示.提交中",
