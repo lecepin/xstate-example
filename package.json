@@ -1,7 +1,13 @@
 {
+  "scripts": {
+    "pub-page": "gh-pages --dist build"
+  },
   "dependencies": {
     "@xstate/inspect": "^0.6.1",
     "@xstate/react": "^1.6.3",
     "xstate": "^4.28.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

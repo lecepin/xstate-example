@@ -2,6 +2,7 @@
   "name": "react",
   "version": "1.0.0",
   "main": "src/index.js",
+  "homepage": ".",
   "dependencies": {
     "@xstate/inspect": "^0.6.2",
     "@xstate/react": "^2.0.0",
